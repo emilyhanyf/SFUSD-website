@@ -1,0 +1,46 @@
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.imgContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.homeBtn {
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.btn:hover .icon {
+  filter: brightness(0.8);
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+}
+
+/* .leftButton {
+  position: absolute;
+  left: 80px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.rightButton {
+  position: absolute;
+  right: 80px;
+  top: 50%;
+  transform: translateY(-50%);
+} */
