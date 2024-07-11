@@ -13,34 +13,48 @@
   width: 100%;
 }
 
-.homeBtn {
-  background-color: transparent;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  margin: 5px;
-  border-radius: 5px;
+.mainImage {
+  max-width: 100%;
+  height: auto;
 }
 
-.btn:hover .icon {
-  filter: brightness(0.8);
+.backgroundImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+
+.buttonContainer {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    top: 390px;
+    left: 640px;
+    z-index: 1;
+  }
+
+.btn {
+    border-radius: 42px;
+    width: 258.19px;
+    height: 72px;
+    border: transparent;
+    font-size: 25px;
 }
 
-.icon {
-  width: 50px;
-  height: 50px;
+.btn:hover {
+    transform: scale(1.1);
 }
 
-/* .leftButton {
-  position: absolute;
-  left: 80px;
-  top: 50%;
-  transform: translateY(-50%);
+.btn a {
+    text-decoration: none;
 }
 
-.rightButton {
-  position: absolute;
-  right: 80px;
-  top: 50%;
-  transform: translateY(-50%);
-} */
+p {
+    text-decoration: none;
+}
