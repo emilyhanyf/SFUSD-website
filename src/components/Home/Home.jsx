@@ -54,22 +54,24 @@ export const Home = () => {
   };
 
   return (
-    <section className={styles.container}>
-      <div className={styles.backgroundImage}>
-        <img
-          src={getBackgroundImage()}
-          className={styles.mainImage}
-          alt={`Homepage Image`}
-        />
-      </div>
+    <div className={styles.backgroundImage}>
+      <img
+        src={getBackgroundImage()}
+        className={styles.mainImage}
+        alt={`Homepage Image`}
+      />
+
       <div className={styles.buttonContainer}>
         <button
           className={styles.btn}
           onMouseEnter={() => handleMouseEnter("part1")}
           onMouseLeave={handleMouseLeave}
           style={{ backgroundColor: getButtonColor(hoveredButton) }}
-        > 
-          <Link to="/part1"> <p style={{ color: getTextColor(hoveredButton) }}>Part 1</p> </Link>
+        >
+          <Link to="/part1">
+            {" "}
+            <p style={{ color: getTextColor(hoveredButton) }}>Part 1</p>{" "}
+          </Link>
         </button>
         <button
           className={styles.btn}
@@ -77,7 +79,10 @@ export const Home = () => {
           onMouseLeave={handleMouseLeave}
           style={{ backgroundColor: getButtonColor(hoveredButton) }}
         >
-          <Link to="/part2"> <p style={{ color: getTextColor(hoveredButton) }}>Part 2</p> </Link>
+          <Link to="/part2">
+            {" "}
+            <p style={{ color: getTextColor(hoveredButton) }}>Part 2</p>{" "}
+          </Link>
         </button>
         <button
           className={styles.btn}
@@ -85,9 +90,12 @@ export const Home = () => {
           onMouseLeave={handleMouseLeave}
           style={{ backgroundColor: getButtonColor(hoveredButton) }}
         >
-          <Link to="/part3"> <p style={{ color: getTextColor(hoveredButton) }}>Part 3</p> </Link>
+          <Link to="/part3">
+            {" "}
+            <p style={{ color: getTextColor(hoveredButton) }}>Part 3</p>{" "}
+          </Link>
         </button>
       </div>
-    </section>
+    </div>
   );
 };

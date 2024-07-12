@@ -21,13 +21,13 @@ export const Part1 = () => {
   };
 
   const handleNext = () => {
-    let index = val < screens.length - 1 ? val + 1 : 0;
+    let index = val < screens.length - 1 ? val + 1 : index;
     setVal(index);
     setScreenData(screens[index]);
   };
 
   const handlePrevious = () => {
-    let index = val > 0 ? val - 1 : screens.length - 1;
+    let index = val > 0 ? val - 1 : index;
     setVal(index);
     setScreenData(screens[index]);
   };
