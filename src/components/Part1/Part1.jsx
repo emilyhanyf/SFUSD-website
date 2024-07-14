@@ -32,8 +32,15 @@ export const Part1 = () => {
     setScreenData(screens[index]);
   };
 
+  const goHome = () => {
+    window.location.href = '/';
+  }
+
   return (
     <section className={styles.container}>
+      <button className={`${styles.btn} ${styles.homeButton}`} onClick={goHome}>
+        <img src={getImageUrl("part1/homeIcon.png")} alt="Home" className={styles.icon} />
+      </button>
       <button className={`${styles.btn} ${styles.leftButton}`} onClick={handlePrevious}>
         <img src={getImageUrl("part1/leftArrow.png")} alt="Previous" className={styles.icon} />
       </button>

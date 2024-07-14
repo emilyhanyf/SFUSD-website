@@ -58,14 +58,22 @@
 
 .leftButton {
   position: absolute;
-  left: 80px;
+  left: 4%;
   top: 50%;
   transform: translateY(-50%);
 }
 
 .rightButton {
   position: absolute;
-  right: 80px;
+  right: 4%;
   top: 50%;
   transform: translateY(-50%);
+}
+
+.homeButton {
+  position: absolute;
+  left: 5%;
+  top: 3%;
+  transform: translateY(-50%);
+  transform: translateX(-50%);
 }
