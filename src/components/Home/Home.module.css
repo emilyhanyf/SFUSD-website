@@ -33,7 +33,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 18px;
+  gap: 20px;
   top: 56.85%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -48,11 +48,28 @@
   font-size: 25px;
 }
 
+.mainBtn {
+  border-radius: 42px;
+  width: 394px;
+  height: 84.65px;
+  font-size: 30px;
+  border-style: solid;
+  border-width: 7px;
+}
+
 .btn:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .btn a {
+  text-decoration: none;
+}
+
+.mainBtn:hover {
+  transform: scale(1.05);
+}
+
+.mainBtn a {
   text-decoration: none;
 }
 

@@ -53,6 +53,32 @@ export const Home = () => {
     }
   };
 
+  const getBorderColor = (button) => {
+    switch (button) {
+      case "part1":
+        return "#694220"; // brown
+      case "part2":
+        return "#969696"; // light grey
+      case "part3":
+        return "#000000"; // black
+      default:
+        return "#FFFFFF"; // white
+    }
+  };
+
+  const getMainButtonColor = (button) => {
+    switch (button) {
+      case "part1":
+        return "#FCEBD8"; // beige
+      case "part2":
+        return "#FFFFFF"; // white
+      case "part3":
+        return "#FFFFFF"; // white
+      default:
+        return "#5FAED5"; // light blue
+    }
+  };
+
   return (
     <div className={styles.backgroundImage}>
       <img
@@ -69,8 +95,7 @@ export const Home = () => {
           style={{ backgroundColor: getButtonColor(hoveredButton) }}
         >
           <Link to="/part1">
-            {" "}
-            <p style={{ color: getTextColor(hoveredButton) }}>Part 1</p>{" "}
+            <p style={{ color: getTextColor(hoveredButton) }}>Segregation and Resegregation</p>
           </Link>
         </button>
         <button
@@ -80,8 +105,7 @@ export const Home = () => {
           style={{ backgroundColor: getButtonColor(hoveredButton) }}
         >
           <Link to="/part2">
-            {" "}
-            <p style={{ color: getTextColor(hoveredButton) }}>Part 2</p>{" "}
+            <p style={{ color: getTextColor(hoveredButton) }}>Issues With Past Policies in 2010</p>
           </Link>
         </button>
         <button
@@ -91,8 +115,20 @@ export const Home = () => {
           style={{ backgroundColor: getButtonColor(hoveredButton) }}
         >
           <Link to="/part3">
-            {" "}
-            <p style={{ color: getTextColor(hoveredButton) }}>Part 3</p>{" "}
+            <p style={{ color: getTextColor(hoveredButton) }}>New Policies in 2018</p>
+          </Link>
+        </button>
+        <button
+          className={styles.mainBtn}
+          onMouseEnter={() => handleMouseEnter("default")}
+          onMouseLeave={handleMouseLeave}
+          style={{ 
+            backgroundColor: getMainButtonColor(hoveredButton),
+            borderColor: getBorderColor(hoveredButton) 
+          }}
+        >
+          <Link to="/part1">
+            <p style={{ color: getBorderColor(hoveredButton) }}>Get Started</p>
           </Link>
         </button>
       </div>
