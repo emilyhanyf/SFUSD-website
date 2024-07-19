@@ -1,79 +1,122 @@
 .container {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
-.imgContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+/* .imgContainer {
+  display: inline;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+} */
+
+.backgroundImage {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-position: center;
 }
 
 .mainImage {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 .thumbnailContainer {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
 }
 
 .thumbnail {
-    width: 50px;
-    height: 50px;
-    margin: 0 5px;
-    cursor: pointer;
-    opacity: 0.6;
-    transition: opacity 0.3s;
+  width: 50px;
+  height: 50px;
+  margin: 0 5px;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.3s;
 }
 
 .thumbnail:hover,
 .clicked {
-    opacity: 1;
+  opacity: 1;
 }
 
 .btn {
-    background-color: transparent;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    margin: 5px;
-    border-radius: 5px;
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  margin: 5px;
+  border-radius: 5px;
 }
 
 .btn:hover .icon {
-    filter: brightness(0.8);
+  filter: brightness(0.8);
 }
 
 .icon {
-    width: 50px;
-    height: 50px;
+  width: 50px;
+  height: 50px;
 }
 
 .leftButton {
-    position: absolute;
-    left: 2%;
-    top: 50%;
-    transform: translateY(-50%);
+  position: absolute;
+  left: 2%;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .rightButton {
-    position: absolute;
-    right: 2%;
-    top: 50%;
-    transform: translateY(-50%);
+  position: absolute;
+  right: 2%;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .homeButton {
-    position: absolute;
-    left: 4%;
-    top: 3%;
-    transform: translateY(-50%);
-    transform: translateX(-50%);
-  }
+  position: absolute;
+  left: 4%;
+  top: 3%;
+  transform: translateY(-50%);
+  transform: translateX(-50%);
+}
+
+.backButton {
+  position: absolute;
+  left: 4%;
+  top: 3%;
+  transform: translateY(-50%);
+  transform: translateX(-50%);
+}
+
+.btnContainer {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  gap: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.learnMoreBtn {
+  background-color: #3d3d3d;
+  color: #f2f2f2;
+  border-radius: 42px;
+  width: 200px;
+  height: 50px;
+  border: transparent;
+  font-size: 20px;
+  z-index: 1;
+}
