@@ -38,17 +38,17 @@ export const Part2 = () => {
     setScreenData(screens[index]);
   };
 
-  const goBack = () => {
-    setVal(2);
-    setScreenData(screens[2]);
-  };
-
   const handleLearnMoreClick = (index) => {
     setScreenData(moreInfo[index]);
   };
 
   const goHome = () => {
     window.location.href = "/";
+  };
+
+  const goBack = () => {
+    setVal(2);
+    setScreenData(screens[2]);
   };
 
   return (
@@ -76,7 +76,7 @@ export const Part2 = () => {
         </div>
       )}
 
-      {screenData.id > 5 && (
+      {screenData.id > 4 && (
         <>
           <button className={`${styles.btn} ${styles.homeButton}`} onClick={goBack}>
             <img src={getImageUrl("part2/leftArrow.png")} alt="Back" className={styles.icon}/>

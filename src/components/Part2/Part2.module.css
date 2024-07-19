@@ -90,20 +90,12 @@
   transform: translateX(-50%);
 }
 
-.backButton {
-  position: absolute;
-  left: 4%;
-  top: 3%;
-  transform: translateY(-50%);
-  transform: translateX(-50%);
-}
-
 .btnContainer {
   position: absolute;
   top: 65%;
   left: 50%;
   transform: translate(-50%, -50%);
-  gap: 100px;
+  gap: 250px;
   display: flex;
   flex-direction: row;
   justify-content: center;
