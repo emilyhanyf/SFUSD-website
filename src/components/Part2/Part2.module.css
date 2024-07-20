@@ -111,4 +111,5 @@
   border: transparent;
   font-size: 20px;
   z-index: 1;
+  cursor: pointer;
 }
