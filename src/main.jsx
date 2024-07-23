@@ -7,7 +7,7 @@ import "@fontsource/roboto"
 import { BrowserRouter } from 'react-router-dom'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
+  <BrowserRouter basename={'/SFUSD-website/'}>
     <App />
   </BrowserRouter>,
 )
