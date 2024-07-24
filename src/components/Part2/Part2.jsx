@@ -43,7 +43,7 @@ export const Part2 = () => {
   };
 
   const goHome = () => {
-    window.location.href = "/";
+    window.location.href = "/SFUSD-website/";
   };
 
   const goBack = () => {

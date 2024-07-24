@@ -33,7 +33,7 @@ export const Part1 = () => {
   };
 
   const goHome = () => {
-    window.location.href = '/';
+    window.location.href = '/SFUSD-website/';
   }
 
   return (

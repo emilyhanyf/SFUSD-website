@@ -54,7 +54,7 @@ export const Part3 = () => {
   };
 
   const goHome = () => {
-    window.location.href = "/";
+    window.location.href = "/SFUSD-website/";
   };
 
   const goBackToGoal = () => {
