@@ -37,6 +37,7 @@ export const Part1 = () => {
   }
 
   return (
+    <div>
     <section className={styles.container}>
       <button className={`${styles.btn} ${styles.homeButton}`} onClick={goHome}>
         <img src={getImageUrl("part1/homeIcon.png")} alt="Home" className={styles.icon} />
@@ -50,6 +51,7 @@ export const Part1 = () => {
       <button className={`${styles.btn} ${styles.rightButton}`} onClick={handleNext}>
         <img src={getImageUrl("part1/rightArrow.png")} alt="Next" className={styles.icon} />
       </button>
+      </section>
       <div className={styles.thumbnailContainer}>
         {screens.map((data, i) => (
           <img
@@ -61,6 +63,6 @@ export const Part1 = () => {
           />
         ))}
       </div>
-    </section>
+    </div>
   );
 };

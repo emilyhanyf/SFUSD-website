@@ -52,41 +52,95 @@ export const Part2 = () => {
   };
 
   return (
-    <section className={styles.backgroundImage}>
-      {screenData.id < 5 && (
-        <>
-          <button className={`${styles.btn} ${styles.homeButton}`} onClick={goHome}>
-            <img src={getImageUrl("part2/homeIcon.png")} alt="Home" className={styles.icon}/>
-          </button>
-          <button className={`${styles.btn} ${styles.leftButton}`} onClick={handlePrevious}>
-            <img src={getImageUrl("part2/leftArrow.png")} alt="Previous" className={styles.icon}/>
-          </button>
-          <button className={`${styles.btn} ${styles.rightButton}`} onClick={handleNext}>
-            <img src={getImageUrl("part2/rightArrow.png")} alt="Next" className={styles.icon}/>
-          </button>
-        </>
-      )}
-      
-      <img src={screenData.value} className={styles.mainImage} alt={`Screen ${screenData.id}`}/>
-      {screenData.id === 2 && (
-        <div className={styles.btnContainer}>
-          <button className={styles.learnMoreBtn} onClick={() => handleLearnMoreClick(0)}> Learn More </button>
-          <button className={styles.learnMoreBtn} onClick={() => handleLearnMoreClick(1)}> Learn More </button>
-          <button className={styles.learnMoreBtn} onClick={() => handleLearnMoreClick(2)}> Learn More </button>
-        </div>
-      )}
+    <div>
+      <section className={styles.backgroundImage}>
+        {screenData.id < 5 && (
+          <>
+            <button
+              className={`${styles.btn} ${styles.homeButton}`}
+              onClick={goHome}
+            >
+              <img
+                src={getImageUrl("part2/homeIcon.png")}
+                alt="Home"
+                className={styles.icon}
+              />
+            </button>
+            <button
+              className={`${styles.btn} ${styles.leftButton}`}
+              onClick={handlePrevious}
+            >
+              <img
+                src={getImageUrl("part2/leftArrow.png")}
+                alt="Previous"
+                className={styles.icon}
+              />
+            </button>
+            <button
+              className={`${styles.btn} ${styles.rightButton}`}
+              onClick={handleNext}
+            >
+              <img
+                src={getImageUrl("part2/rightArrow.png")}
+                alt="Next"
+                className={styles.icon}
+              />
+            </button>
+          </>
+        )}
 
-      {screenData.id > 4 && (
-        <>
-          <button className={`${styles.btn} ${styles.homeButton}`} onClick={goBack}>
-            <img src={getImageUrl("part2/leftArrow.png")} alt="Back" className={styles.icon}/>
-          </button>
-        </>
-      )}
+        <img
+          src={screenData.value}
+          className={styles.mainImage}
+          alt={`Screen ${screenData.id}`}
+        />
+
+        {screenData.id === 2 && (
+          <div className={styles.btnContainer}>
+            <button
+              className={styles.learnMoreBtn}
+              onClick={() => handleLearnMoreClick(0)}
+            >
+              {" "}
+              Learn More{" "}
+            </button>
+            <button
+              className={styles.learnMoreBtn}
+              onClick={() => handleLearnMoreClick(1)}
+            >
+              {" "}
+              Learn More{" "}
+            </button>
+            <button
+              className={styles.learnMoreBtn}
+              onClick={() => handleLearnMoreClick(2)}
+            >
+              {" "}
+              Learn More{" "}
+            </button>
+          </div>
+        )}
+
+        {screenData.id > 4 && (
+          <>
+            <button
+              className={`${styles.btn} ${styles.homeButton}`}
+              onClick={goBack}
+            >
+              <img
+                src={getImageUrl("part2/leftArrow.png")}
+                alt="Back"
+                className={styles.icon}
+              />
+            </button>
+          </>
+        )}
+      </section>
 
       <div className={styles.thumbnailContainer}>
         {screens.map((data, i) => (
-          <img key={data.id}
+          <img
+            key={data.id}
             className={`${styles.thumbnail} ${
               screenData.id === i ? styles.clicked : ""
             }`}
@@ -96,6 +150,6 @@ export const Part2 = () => {
           />
         ))}
       </div>
-    </section>
+    </div>
   );
 };

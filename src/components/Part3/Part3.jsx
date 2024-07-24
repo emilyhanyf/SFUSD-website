@@ -68,134 +68,136 @@ export const Part3 = () => {
   };
 
   return (
-    <section className={styles.backgroundImage}>
-      {screenData.id === 3 && (
-        <div className={styles.accordionContainer}>
-          <Accordion />
-        </div>
-      )}
+    <div>
+      <section className={styles.backgroundImage}>
+        {screenData.id === 3 && (
+          <div className={styles.accordionContainer}>
+            <Accordion />
+          </div>
+        )}
 
-      {screenData.id < 5 && (
-        <>
-          <button
-            className={`${styles.btn} ${styles.homeButton}`}
-            onClick={goHome}
-          >
-            <img
-              src={getImageUrl("part3/homeIcon.png")}
-              alt="Home"
-              className={styles.icon}
-            />
-          </button>
-          <button
-            className={`${styles.btn} ${styles.leftButton}`}
-            onClick={handlePrevious}
-          >
-            <img
-              src={getImageUrl("part3/leftArrow.png")}
-              alt="Previous"
-              className={styles.icon}
-            />
-          </button>
-          <button
-            className={`${styles.btn} ${styles.rightButton}`}
-            onClick={handleNext}
-          >
-            <img
-              src={getImageUrl("part3/rightArrow.png")}
-              alt="Next"
-              className={styles.icon}
-            />
-          </button>
-        </>
-      )}
+        {screenData.id < 5 && (
+          <>
+            <button
+              className={`${styles.btn} ${styles.homeButton}`}
+              onClick={goHome}
+            >
+              <img
+                src={getImageUrl("part3/homeIcon.png")}
+                alt="Home"
+                className={styles.icon}
+              />
+            </button>
+            <button
+              className={`${styles.btn} ${styles.leftButton}`}
+              onClick={handlePrevious}
+            >
+              <img
+                src={getImageUrl("part3/leftArrow.png")}
+                alt="Previous"
+                className={styles.icon}
+              />
+            </button>
+            <button
+              className={`${styles.btn} ${styles.rightButton}`}
+              onClick={handleNext}
+            >
+              <img
+                src={getImageUrl("part3/rightArrow.png")}
+                alt="Next"
+                className={styles.icon}
+              />
+            </button>
+          </>
+        )}
 
-      <img
-        src={screenData.value}
-        className={styles.mainImage}
-        alt={`Screen ${screenData.id}`}
-      />
-      {screenData.id === 2 && (
-        <div className={styles.btnContainer}>
-          <button
-            className={styles.learnMoreBtn}
-            onClick={() => handleLearnMoreClick(0)}
-          >
-            {" "}
-            Learn More{" "}
-          </button>
-          <button
-            className={styles.learnMoreBtn}
-            onClick={() => handleLearnMoreClick(1)}
-          >
-            {" "}
-            Learn More{" "}
-          </button>
-          <button
-            className={styles.learnMoreBtn}
-            onClick={() => handleLearnMoreClick(2)}
-          >
-            {" "}
-            Learn More{" "}
-          </button>
-        </div>
-      )}
+        <img
+          src={screenData.value}
+          className={styles.mainImage}
+          alt={`Screen ${screenData.id}`}
+        />
+        {screenData.id === 2 && (
+          <div className={styles.btnContainer}>
+            <button
+              className={styles.learnMoreBtn}
+              onClick={() => handleLearnMoreClick(0)}
+            >
+              {" "}
+              Learn More{" "}
+            </button>
+            <button
+              className={styles.learnMoreBtn}
+              onClick={() => handleLearnMoreClick(1)}
+            >
+              {" "}
+              Learn More{" "}
+            </button>
+            <button
+              className={styles.learnMoreBtn}
+              onClick={() => handleLearnMoreClick(2)}
+            >
+              {" "}
+              Learn More{" "}
+            </button>
+          </div>
+        )}
 
-      {screenData.id === 4 && (
-        <div className={styles.btnContainer2}>
-          <button
-            className={styles.learnMoreBtn}
-            onClick={() => handleLearnMoreClick(0)}
-          >
-            {" "}
-            Learn More{" "}
-          </button>
-          <button
-            className={styles.learnMoreBtn}
-            onClick={() => handleLearnMoreClick(1)}
-          >
-            {" "}
-            Learn More{" "}
-          </button>
-          <button
-            className={styles.learnMoreBtn}
-            onClick={() => handleLearnMoreClick(2)}
-          >
-            {" "}
-            Learn More{" "}
-          </button>
-        </div>
-      )}
+        {screenData.id === 4 && (
+          <div className={styles.btnContainer2}>
+            <button
+              className={styles.learnMoreBtn}
+              onClick={() => handleLearnMoreClick(0)}
+            >
+              {" "}
+              Learn More{" "}
+            </button>
+            <button
+              className={styles.learnMoreBtn}
+              onClick={() => handleLearnMoreClick(1)}
+            >
+              {" "}
+              Learn More{" "}
+            </button>
+            <button
+              className={styles.learnMoreBtn}
+              onClick={() => handleLearnMoreClick(2)}
+            >
+              {" "}
+              Learn More{" "}
+            </button>
+          </div>
+        )}
 
-      {screenData.id > 4 && screenData.id < 8 && (
-        <>
-          <button
-            className={`${styles.btn} ${styles.homeButton}`}
-            onClick={goBackToGoal}
-          >
-            <img
-              src={getImageUrl("part2/leftArrow.png")}
-              alt="Back"
-              className={styles.icon}
-            />
-          </button>
-        </>
-      )}
+        {screenData.id > 4 && screenData.id < 8 && (
+          <>
+            <button
+              className={`${styles.btn} ${styles.homeButton}`}
+              onClick={goBackToGoal}
+            >
+              <img
+                src={getImageUrl("part2/leftArrow.png")}
+                alt="Back"
+                className={styles.icon}
+              />
+            </button>
+          </>
+        )}
 
-      {screenData.id > 7 && (
-        <>
-          <button
-            className={`${styles.btn} ${styles.homeButton}`}
-            onClick={goBackToProposal}
-          >
-            <img
-              src={getImageUrl("part2/leftArrow.png")}
-              alt="Back"
-              className={styles.icon}
-            />
-          </button>
-        </>
-      )}
+        {screenData.id > 7 && (
+          <>
+            <button
+              className={`${styles.btn} ${styles.homeButton}`}
+              onClick={goBackToProposal}
+            >
+              <img
+                src={getImageUrl("part2/leftArrow.png")}
+                alt="Back"
+                className={styles.icon}
+              />
+            </button>
+          </>
+        )}
+      </section>
 
       <div className={styles.thumbnailContainer}>
         {screens.map((data, i) => (
@@ -210,6 +212,6 @@ export const Part3 = () => {
           />
         ))}
       </div>
-    </section>
+    </div>
   );
 };

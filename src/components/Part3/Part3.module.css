@@ -13,6 +13,10 @@
   width: 100%;
 }
 
+.backgroundImage {
+  position: relative;
+}
+
 .mainImage {
   max-width: 100%;
   height: auto;
@@ -52,8 +56,8 @@
 }
 
 .icon {
-  width: 50px;
-  height: 50px;
+  width: 3.5vw;
+  height: auto;
 }
 
 .leftButton {
@@ -80,10 +84,10 @@
 
 .btnContainer {
   position: absolute;
-  top: 70%;
+  top: 75%;
   left: 50%;
   transform: translate(-50%, -50%);
-  gap: 330px;
+  gap: 19vw;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -92,10 +96,10 @@
 
 .btnContainer2 {
   position: absolute;
-  top: 75%;
+  top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
-  gap: 330px;
+  gap: 17.5vw;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -105,18 +109,18 @@
 .learnMoreBtn {
   background-color: black;
   color: white;
-  border-radius: 42px;
-  width: 200px;
-  height: 50px;
+  border-radius: 50vw;
+  width: 12vw;
+  height: 3vw;
   border: transparent;
-  font-size: 20px;
+  font-size: 1.5vw;
   z-index: 1;
   cursor: pointer;
 }
 
 .accordionContainer {
   position: absolute;
-  top: 52%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   gap: 330px;
@@ -128,46 +132,51 @@
 
 .wrapper {
   display: flex;
-  height: 100vh;
   width: 100vw;
+  height: 30vh;
   justify-content: center;
   align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  top: 5vw;
 }
 
 .accordion {
-  width: 60vw;
+  width: 70vw;
   z-index: 10;
 }
 
 .item {
   background: black;
-  border-radius: 42px;
-  margin-bottom: 5px;
-  padding: 30px 30px;
+  border-radius: 2vw;
+  margin-bottom: 0.25vw;
+  padding: 2vw; 
+  transition: background 0.5s ease, padding 0.5s ease;
 }
 
 .item.selected {
   background: white;
-  border: 5px solid black;
-  border-radius: 42px;
-  margin-bottom: 5px;
-  padding: 20px 30px;
+  border: 0.25vw solid black;
+  border-radius: 2vw;
+  margin-bottom: 0.25vw;
+  padding: 1vw 2vw; 
 }
 
 .title {
   color: white;
-  font-size: 25px;
+  font-size: 1.5vw; 
   display: flex;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
+  transition: color 0.5s ease;
 }
 
 .title.selected {
-    background: linear-gradient(50deg, #75C8F6, #B78BFF); 
-    background-clip: text; 
-    color: transparent; 
-  font-size: 25px;
+  background: linear-gradient(50deg, #75C8F6, #B78BFF);
+  background-clip: text;
+  color: transparent;
+  font-size: 1.5vw; 
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -176,16 +185,15 @@
 
 .content {
   color: white;
-  max-height: 0px;
+  max-height: 0;
   overflow: hidden;
-  transition: all 0.5s cubic-bezier(0, 1, 0, 1);
+  transition: padding 0.5s ease, color 0.5s ease;
 }
 
 .content.show {
   color: black;
-  max-height: 9999px;
+  max-height: 50vw; 
   height: auto;
-  font-size: 20px;
-  padding-top: 10px;
-  transition: all 0.5s cubic-bezier(1, 0, 1);
+  font-size: 1.25vw; 
+  padding-top: 0.5vw; 
 }
