@@ -69,7 +69,16 @@ export const Part3 = () => {
 
   return (
     <div>
-      <section className={styles.backgroundImage}>
+      <section
+        className={styles.backgroundImage}
+        onClick={
+          screenData.id > 7
+            ? goBackToProposal
+            : screenData.id > 4
+            ? goBackToGoal
+            : null
+        }
+      >
         {screenData.id === 3 && (
           <div className={styles.accordionContainer}>
             <Accordion />
@@ -98,16 +107,18 @@ export const Part3 = () => {
                 className={styles.icon}
               />
             </button>
-            <button
-              className={`${styles.btn} ${styles.rightButton}`}
-              onClick={handleNext}
-            >
-              <img
-                src={getImageUrl("part3/rightArrow.png")}
-                alt="Next"
-                className={styles.icon}
-              />
-            </button>
+            {screenData.id != screens.length - 1 && (
+              <button
+                className={`${styles.btn} ${styles.rightButton}`}
+                onClick={handleNext}
+              >
+                <img
+                  src={getImageUrl("part3/rightArrow.png")}
+                  alt="Next"
+                  className={styles.icon}
+                />
+              </button>
+            )}
           </>
         )}
 

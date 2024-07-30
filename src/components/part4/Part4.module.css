@@ -1,0 +1,141 @@
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.backgroundImage {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.mainImage {
+  max-width: 100%;
+  height: auto;
+}
+
+.thumbnailContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.thumbnail {
+  width: 70px;
+  height: 50px;
+  margin: 0 5px;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.3s;
+}
+
+.thumbnail:hover,
+.clicked {
+  opacity: 1;
+}
+
+.btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover .icon, 
+.btn:hover .iconBtn,
+.btn:hover .linkBtn {
+  filter: brightness(0.8);
+}
+
+.icon {
+  width: 3.5vw;
+  height: auto;
+}
+
+.leftButton {
+  position: absolute;
+  left: 2%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.rightButton {
+  position: absolute;
+  right: 2%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.homeButton {
+  position: absolute;
+  left: 4%;
+  top: 4%;
+  transform: translateY(-50%);
+  transform: translateX(-50%);
+}
+
+.btnContainer {
+  position: absolute;
+  top: 30vw;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  gap: 11vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.iconBtn {
+  width: 15vw;
+  height: auto;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+.linkContainer {
+  top: 30vw;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1vw;
+}
+
+.linkBtn {
+  background-color: white;
+  color: #1276A8;
+  border-radius: 2vw;
+  border: transparent;
+  cursor: pointer;
+  font-size: 2vw;
+  width: 50vw;
+  height: 5vw;
+  text-align: center;
+}
+
+.linkBtn:hover {
+  transform: scale(1.05);;
+}
+
+.linkContainer2 {
+  top: 23vw;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18vw;
+}

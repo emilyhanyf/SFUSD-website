@@ -51,10 +51,7 @@
 .btn {
   background-color: transparent;
   border: none;
-  padding: 10px;
   cursor: pointer;
-  margin: 5px;
-  border-radius: 5px;
 }
 
 .btn:hover .icon {
@@ -83,7 +80,7 @@
 .homeButton {
   position: absolute;
   left: 5%;
-  top: 2.5%;
+  top: 5%;
   transform: translateY(-50%);
   transform: translateX(-50%);
 }

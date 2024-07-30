@@ -66,16 +66,18 @@ export const Part1 = () => {
             alt={`Screen ${screenData.id}`}
           />
         </div>
-        <button
-          className={`${styles.btn} ${styles.rightButton}`}
-          onClick={handleNext}
-        >
-          <img
-            src={getImageUrl("part1/rightArrow.png")}
-            alt="Next"
-            className={styles.icon}
-          />
-        </button>
+        {screenData.id != screens.length - 1 && (
+          <button
+            className={`${styles.btn} ${styles.rightButton}`}
+            onClick={handleNext}
+          >
+            <img
+              src={getImageUrl("part1/rightArrow.png")}
+              alt="Next"
+              className={styles.icon}
+            />
+          </button>
+        )}
       </section>
       <div className={styles.thumbnailContainer}>
         {screens.map((data, i) => (

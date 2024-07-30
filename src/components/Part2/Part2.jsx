@@ -53,7 +53,10 @@ export const Part2 = () => {
 
   return (
     <div>
-      <section className={styles.backgroundImage}>
+      <section
+        className={styles.backgroundImage}
+        onClick={screenData.id > 4 ? goBack : null}
+      >
         {screenData.id < 5 && (
           <>
             <button
@@ -76,16 +79,18 @@ export const Part2 = () => {
                 className={styles.icon}
               />
             </button>
-            <button
-              className={`${styles.btn} ${styles.rightButton}`}
-              onClick={handleNext}
-            >
-              <img
-                src={getImageUrl("part2/rightArrow.png")}
-                alt="Next"
-                className={styles.icon}
-              />
-            </button>
+            {screenData.id != screens.length - 1 && (
+              <button
+                className={`${styles.btn} ${styles.rightButton}`}
+                onClick={handleNext}
+              >
+                <img
+                  src={getImageUrl("part2/rightArrow.png")}
+                  alt="Next"
+                  className={styles.icon}
+                />
+              </button>
+            )}
           </>
         )}
 

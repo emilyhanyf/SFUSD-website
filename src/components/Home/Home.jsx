@@ -22,6 +22,7 @@ export const Home = () => {
         return getImageUrl("home/part2.png");
       case "part3":
         return getImageUrl("home/part3.png");
+      case "part4":
       default:
         return getImageUrl("home/default.png");
     }
@@ -35,6 +36,7 @@ export const Home = () => {
         return "#3D3D3D"; // dark grey
       case "part3":
         return "#000000"; // black
+      case "part4":
       default:
         return "#FFFFFF"; // white
     }
@@ -48,6 +50,7 @@ export const Home = () => {
         return "#F2F2F2"; // light grey
       case "part3":
         return "#FFFFFF"; // white
+      case "part4":
       default:
         return "#1276A8"; // blue
     }
@@ -61,6 +64,7 @@ export const Home = () => {
         return "#969696"; // light grey
       case "part3":
         return "#000000"; // black
+      case "part4":
       default:
         return "#FFFFFF"; // white
     }
@@ -74,6 +78,7 @@ export const Home = () => {
         return "#FFFFFF"; // white
       case "part3":
         return "#FFFFFF"; // white
+      case "part4":
       default:
         return "#5FAED5"; // light blue
     }
@@ -95,7 +100,9 @@ export const Home = () => {
           style={{ backgroundColor: getButtonColor(hoveredButton) }}
         >
           <Link to="/part1">
-            <p style={{ color: getTextColor(hoveredButton) }}>Segregation and Resegregation</p>
+            <p style={{ color: getTextColor(hoveredButton) }}>
+              Segregation and Resegregation
+            </p>
           </Link>
         </button>
         <button
@@ -105,7 +112,9 @@ export const Home = () => {
           style={{ backgroundColor: getButtonColor(hoveredButton) }}
         >
           <Link to="/part2">
-            <p style={{ color: getTextColor(hoveredButton) }}>Issues With Past Policies in 2010</p>
+            <p style={{ color: getTextColor(hoveredButton) }}>
+              Issues With Past Policies in 2010
+            </p>
           </Link>
         </button>
         <button
@@ -115,16 +124,30 @@ export const Home = () => {
           style={{ backgroundColor: getButtonColor(hoveredButton) }}
         >
           <Link to="/part3">
-            <p style={{ color: getTextColor(hoveredButton) }}>New Policies in 2018</p>
+            <p style={{ color: getTextColor(hoveredButton) }}>
+              New Policies in 2018
+            </p>
+          </Link>
+        </button>
+        <button
+          className={styles.btn}
+          onMouseEnter={() => handleMouseEnter("part4")}
+          onMouseLeave={handleMouseLeave}
+          style={{ backgroundColor: getButtonColor(hoveredButton) }}
+        >
+          <Link to="/part4">
+            <p style={{ color: getTextColor(hoveredButton) }}>
+              Ongoing SFUSD Decisions
+            </p>
           </Link>
         </button>
         <button
           className={styles.mainBtn}
           onMouseEnter={() => handleMouseEnter("default")}
           onMouseLeave={handleMouseLeave}
-          style={{ 
+          style={{
             backgroundColor: getMainButtonColor(hoveredButton),
-            borderColor: getBorderColor(hoveredButton) 
+            borderColor: getBorderColor(hoveredButton),
           }}
         >
           <Link to="/part1">
