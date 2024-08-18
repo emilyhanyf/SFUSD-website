@@ -17,12 +17,24 @@ const featuresScreens = [
 ];
 
 const moreLinks = [
-    { text: 'SFUSD Website', url: 'https://www.sfusd.edu/' },
-    { text: 'Frequently Asked Questions', url: 'https://www.sfusd.edu/schools/enroll/student-assignment-policy/student-assignment-changes/frequently-asked-questions' },
-    { text: 'SFUSD Student Assignment Biweekly Updates', url: 'https://www.sfusd.edu/schools/enroll/student-assignment-policy/student-assignment-changes/student-assignment-newsletter' },
-    { text: 'SFUSD Student Assignment Blogs', url: 'https://www.sfusd.edu/schools/enroll/student-assignment-policy/student-assignment-changes/student-assignment-blog' },
-    { text: 'More on SFUSD\'s New School Assignment Policy', url: 'https://drive.google.com/file/d/1e6-A2y8Mk27WKZGUje17WNC71qlMKs-E/view' }
-  ];
+  { text: "SFUSD Website", url: "https://www.sfusd.edu/" },
+  {
+    text: "Frequently Asked Questions",
+    url: "https://www.sfusd.edu/schools/enroll/student-assignment-policy/student-assignment-changes/frequently-asked-questions",
+  },
+  {
+    text: "SFUSD Student Assignment Biweekly Updates",
+    url: "https://www.sfusd.edu/schools/enroll/student-assignment-policy/student-assignment-changes/student-assignment-newsletter",
+  },
+  {
+    text: "SFUSD Student Assignment Blogs",
+    url: "https://www.sfusd.edu/schools/enroll/student-assignment-policy/student-assignment-changes/student-assignment-blog",
+  },
+  {
+    text: "More on SFUSD's New School Assignment Policy",
+    url: "https://drive.google.com/file/d/1e6-A2y8Mk27WKZGUje17WNC71qlMKs-E/view",
+  },
+];
 
 export const Part4 = () => {
   const [screenData, setScreenData] = useState(screens[0]);
@@ -161,30 +173,64 @@ export const Part4 = () => {
         </>
       )}
 
-    {screenData.id === 3 && (
-        <div className={styles.linkContainer2}>
+      {screenData.id === 3 && (
+        <div>
+          <div className={styles.linkContainer2}>
             <button
               className={styles.linkBtn}
-              onClick={() => window.open('https://www.sfusd.edu/resource-alignment-initiative/focus-area-5-create-new-portfolio-schools/get-involved', '_blank')}
+              onClick={() =>
+                window.open(
+                  "https://www.sfusd.edu/resource-alignment-initiative/focus-area-5-create-new-portfolio-schools/get-involved",
+                  "_blank"
+                )
+              }
             >
               Get Involved
             </button>
             <button
               className={styles.linkBtn}
-              onClick={() => window.open('https://www.sfusd.edu/resource-alignment-initiative/resource-alignment-initiative-weekly-updates', '_blank')}
+              onClick={() =>
+                window.open(
+                  "https://www.sfusd.edu/resource-alignment-initiative/resource-alignment-initiative-weekly-updates",
+                  "_blank"
+                )
+              }
             >
               Stay Updated
             </button>
+          </div>
+          <div className={styles.linkBtnClearContainer}>
+            <button
+              className={styles.linkBtnClear}
+              onClick={() =>
+                window.open(
+                  "https://www.sfusd.edu/about-sfusd/board-education/board-meeting-calendar-and-agendas",
+                  "_blank"
+                )
+              }
+            >
+              Board Meeting
+            </button>
+
+            <button
+              className={styles.linkBtnClear}
+              onClick={() =>
+                window.open("https://familylink.sfusd.edu/hc/en-us", "_blank")
+              }
+            >
+              Family Resource
+            </button>
+          </div>
         </div>
       )}
 
-    {screenData.id === 4 && (
+      {screenData.id === 4 && (
         <div className={styles.linkContainer}>
           {moreLinks.map((link, index) => (
             <button
               key={index}
               className={styles.linkBtn}
-              onClick={() => window.open(link.url, '_blank')}
+              onClick={() => window.open(link.url, "_blank")}
             >
               {link.text}
             </button>

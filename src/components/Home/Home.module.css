@@ -34,7 +34,7 @@
   flex-direction: column;
   align-items: center;
   gap: 1vw;
-  top: 65%;
+  top: 66%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
@@ -42,8 +42,8 @@
 
 .btn {
   border-radius: 50vw;
-  width: 15vw;
-  height: 4vw;
+  width: 17vw;
+  height: 4.5vw;
   border: transparent;
   font-size: 1.5vw;
 }

@@ -101,7 +101,10 @@ export const Home = () => {
         >
           <Link to="/part1">
             <p style={{ color: getTextColor(hoveredButton) }}>
-              Segregation and Resegregation
+              Resegregation
+            </p>
+            <p style={{ color: getTextColor(hoveredButton) }}>
+              (1954-2008)
             </p>
           </Link>
         </button>
@@ -113,7 +116,10 @@ export const Home = () => {
         >
           <Link to="/part2">
             <p style={{ color: getTextColor(hoveredButton) }}>
-              Issues With Past Policies in 2010
+              Current Policy
+            </p>
+            <p style={{ color: getTextColor(hoveredButton) }}>
+              (2011-Present)
             </p>
           </Link>
         </button>
@@ -125,7 +131,10 @@ export const Home = () => {
         >
           <Link to="/part3">
             <p style={{ color: getTextColor(hoveredButton) }}>
-              New Policies in 2018
+              New Priorities
+            </p>
+            <p style={{ color: getTextColor(hoveredButton) }}>
+              (2018)
             </p>
           </Link>
         </button>
@@ -137,7 +146,10 @@ export const Home = () => {
         >
           <Link to="/part4">
             <p style={{ color: getTextColor(hoveredButton) }}>
-              Ongoing SFUSD Decisions
+              Ongoing Decisions
+            </p>
+            <p style={{ color: getTextColor(hoveredButton) }}>
+              (2018-Present)
             </p>
           </Link>
         </button>
