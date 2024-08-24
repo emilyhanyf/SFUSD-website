@@ -194,3 +194,51 @@
   font-size: 1.25vw; 
   padding-top: 0.5vw; 
 }
+
+
+.buttonContainer {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  top: 0%;
+  z-index: 1;
+  width: 100%;
+  background: black;
+  gap: 2vw;
+}
+
+.topBtn p {
+  color: white; 
+}
+
+.topBtn {
+  border-radius: 50vw;
+  width: 15vw;
+  height: 4vw;
+  border: transparent;
+  font-size: 1vw;
+  text-decoration: none;
+  background-color: black;
+}
+
+.topBtn:hover {
+  filter: brightness(0.8);
+}
+
+.topBtn a {
+  text-decoration: none;
+}
+
+div {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  width: 100%; /* Ensure the image fills the container */
+  margin: 0;
+  padding: 0;
+}

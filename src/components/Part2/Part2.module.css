@@ -101,3 +101,38 @@
   z-index: 1;
   cursor: pointer;
 }
+
+.buttonContainer {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  top: 0%;
+  z-index: 1;
+  width: 100%;
+  background: #3d3d3d;
+  gap: 2vw;
+}
+
+.topBtn p {
+  color: #F2F2F2; 
+}
+
+.topBtn {
+  border-radius: 50vw;
+  width: 15vw;
+  height: 4vw;
+  border: transparent;
+  font-size: 1vw;
+  text-decoration: none;
+  background-color: #3d3d3d;
+}
+
+.topBtn:hover {
+  filter: brightness(1.5);
+}
+
+.topBtn a {
+  text-decoration: none;
+}

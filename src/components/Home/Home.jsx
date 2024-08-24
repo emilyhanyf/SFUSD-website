@@ -86,6 +86,7 @@ export const Home = () => {
 
   return (
     <div className={styles.backgroundImage}>
+
       <div>
         <img
           src={getBackgroundImage()}
@@ -104,7 +105,7 @@ export const Home = () => {
             borderColor: getBorderColor(hoveredButton),
           }}
         >
-          <Link to="/part4">
+          <Link to="/part1">
             <p style={{ color: getBorderColor(hoveredButton) }}>
               Get Started
             </p>

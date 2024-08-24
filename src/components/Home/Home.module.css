@@ -29,13 +29,13 @@
 }
 
 .buttonContainer {
-  position: absolute;
+  position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 1vw;
-  top: 66%;
+  top: 0%;
   z-index: 1;
   width: 100%;
 }
@@ -46,7 +46,7 @@
   flex-direction: column;
   align-items: center;
   gap: 1vw;
-  top: 55%;
+  top: 65%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
@@ -54,10 +54,10 @@
 
 .btn {
   border-radius: 50vw;
-  width: 17vw;
-  height: 4.5vw;
+  width: 15vw;
+  height: 4vw;
   border: transparent;
-  font-size: 1.5vw;
+  font-size: 1vw;
   background-color: transparent;
 }
 
@@ -71,7 +71,7 @@
 }
 
 .btn:hover {
-  filter: brightness(1.5);
+  filter: brightness(1.2);
 }
 
 .btn a {
@@ -88,4 +88,16 @@
 
 p {
   text-decoration: none;
+}
+
+div {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  width: 100%; 
+  margin: 0;
+  padding: 0;
 }

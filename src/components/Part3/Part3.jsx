@@ -3,6 +3,7 @@ import { getImageUrl } from "../../utils";
 import styles from "./Part3.module.css";
 import Accordion from "./accordion";
 import Accordion2 from './accordion2';
+import { Link } from "react-router-dom";
 
 const screens = [
   { id: 0, value: getImageUrl("part3/screen0.png") },
@@ -79,6 +80,33 @@ export const Part3 = () => {
 
   return (
     <div>
+      <div className={styles.buttonContainer}>
+        <button className={styles.topBtn}>
+          <Link to="/part1">
+            <p>Resegregation</p>
+            <p>(1954-2008)</p>
+          </Link>
+        </button>
+        <button className={styles.topBtn}>
+          <Link to="/part2">
+            <p>Current Policy</p>
+            <p>(2011-Present)</p>
+          </Link>
+        </button>
+        <button className={styles.topBtn}>
+          <Link to="/part3">
+            <p>New Priorities</p>
+            <p>(2018)</p>
+          </Link>
+        </button>
+        <button className={styles.topBtn}>
+          <Link to="/part4">
+            <p>Ongoing Decisions</p>
+            <p>(2018-Present)</p>
+          </Link>
+        </button>
+      </div>
+
       <section
         className={styles.backgroundImage}
         onClick={
@@ -256,7 +284,7 @@ export const Part3 = () => {
         )}
       </section>
 
-      <div className={styles.thumbnailContainer}>
+      {/* <div className={styles.thumbnailContainer}>
         {screens.map((data, i) => (
           <img
             key={data.id}
@@ -268,7 +296,7 @@ export const Part3 = () => {
             alt={`Thumbnail ${data.id}`}
           />
         ))}
-      </div>
+      </div> */}
     </div>
   );
 };

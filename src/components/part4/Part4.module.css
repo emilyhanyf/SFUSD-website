@@ -82,7 +82,7 @@
 
 .btnContainer {
   position: absolute;
-  top: 30vw;
+  top: 33vw;
   left: 50vw;
   transform: translate(-50%, -50%);
   gap: 11vw;
@@ -101,7 +101,7 @@
 }
 
 .linkContainer {
-  top: 30vw;
+  top: 35vw;
   left: 50%;
   transform: translate(-50%, -50%);
   position: absolute;
@@ -139,7 +139,7 @@
 }
 
 .linkContainer2 {
-  top: 23vw;
+  top: 27vw;
   left: 50%;
   transform: translate(-50%, -50%);
   position: absolute;
@@ -151,7 +151,7 @@
 }
 
 .linkBtnClearContainer {
-  top:22vw;
+  top: 27vw;
   left: 52.5%;
   transform: translate(-50%, -50%);
   position: absolute;
@@ -160,4 +160,39 @@
   align-items: center;
   justify-content: center;
   gap: 2.5vw;
+}
+
+.buttonContainer {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  top: 0%;
+  z-index: 1;
+  width: 100%;
+  background: white;
+  gap: 2vw;
+}
+
+.topBtn p {
+  color: #1276A8; 
+}
+
+.topBtn {
+  border-radius: 50vw;
+  width: 15vw;
+  height: 4vw;
+  border: transparent;
+  font-size: 1vw;
+  text-decoration: none;
+  background-color: white;
+}
+
+.topBtn:hover {
+  filter: brightness(1.2);
+}
+
+.topBtn a {
+  text-decoration: none;
 }

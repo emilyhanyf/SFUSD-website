@@ -99,3 +99,38 @@
   transform: translateY(-50%);
   transform: translateX(-50%);
 }
+
+.buttonContainer {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  top: 0%;
+  z-index: 1;
+  width: 100%;
+  background: #522b18;
+  gap: 2vw;
+}
+
+.topBtn p {
+  color: #FFE7D7; 
+}
+
+.topBtn {
+  border-radius: 50vw;
+  width: 15vw;
+  height: 4vw;
+  border: transparent;
+  font-size: 1vw;
+  text-decoration: none;
+  background-color: #522b18;
+}
+
+.topBtn:hover {
+  filter: brightness(1.5);
+}
+
+.topBtn a {
+  text-decoration: none;
+}
