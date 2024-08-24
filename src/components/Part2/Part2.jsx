@@ -51,6 +51,14 @@ export const Part2 = () => {
     setScreenData(screens[2]);
   };
 
+  const handleLastSection = () => {
+    window.location.href = "/SFUSD-website/part1";
+  };
+
+  const handleNextSection = () => {
+    window.location.href = "/SFUSD-website/part3";
+  };
+
   return (
     <div>
       <section
@@ -69,16 +77,20 @@ export const Part2 = () => {
                 className={styles.icon}
               />
             </button>
-            <button
-              className={`${styles.btn} ${styles.leftButton}`}
-              onClick={handlePrevious}
-            >
-              <img
-                src={getImageUrl("part2/leftArrow.png")}
-                alt="Previous"
-                className={styles.icon}
-              />
-            </button>
+            
+            {screenData.id != 0 && (
+                <button
+                className={`${styles.btn} ${styles.leftButton}`}
+                onClick={handlePrevious}
+              >
+                <img
+                  src={getImageUrl("part2/leftArrow.png")}
+                  alt="Previous"
+                  className={styles.icon}
+                />
+              </button>
+            )}
+            
             {screenData.id != screens.length - 1 && (
               <button
                 className={`${styles.btn} ${styles.rightButton}`}
@@ -91,7 +103,45 @@ export const Part2 = () => {
                 />
               </button>
             )}
+            {screenData.id === screens.length - 1 && (
+          <button
+            className={`${styles.btn} ${styles.rightButton}`}
+            onClick={handleNextSection}
+          >
+            <img
+              src={getImageUrl("part2/rightArrow.png")}
+              alt="Next"
+              className={styles.icon}
+            />
+          </button>
+        )}
           </>
+        )}
+
+        {screenData.id === 0 && (
+          <button
+            className={`${styles.btn} ${styles.leftButton}`}
+            onClick={handleLastSection}
+          >
+            <img
+              src={getImageUrl("part2/leftArrow.png")}
+              alt="Last"
+              className={styles.icon}
+            />
+          </button>
+        )}
+
+        {screenData.id === screens.length - 1 && (
+          <button
+            className={`${styles.btn} ${styles.rightButton}`}
+            onClick={handleNextSection}
+          >
+            <img
+              src={getImageUrl("part2/rightArrow.png")}
+              alt="Next"
+              className={styles.icon}
+            />
+          </button>
         )}
 
         <img
@@ -126,7 +176,7 @@ export const Part2 = () => {
           </div>
         )}
 
-        {screenData.id > 4 && (
+        {screenData.id > 4  && (
           <>
             <button
               className={`${styles.btn} ${styles.homeButton}`}

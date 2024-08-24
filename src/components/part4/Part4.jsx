@@ -71,6 +71,10 @@ export const Part4 = () => {
     setScreenData(screens[1]);
   };
 
+  const handleLastSection = () => {
+    window.location.href = "/SFUSD-website/part3";
+  };
+
   return (
     <div>
       <section
@@ -89,16 +93,20 @@ export const Part4 = () => {
                 className={styles.icon}
               />
             </button>
-            <button
-              className={`${styles.btn} ${styles.leftButton}`}
-              onClick={handlePrevious}
-            >
-              <img
-                src={getImageUrl("part4/leftArrow.png")}
-                alt="Previous"
-                className={styles.icon}
-              />
-            </button>
+
+            {screenData.id != 0 && (
+              <button
+                className={`${styles.btn} ${styles.leftButton}`}
+                onClick={handlePrevious}
+              >
+                <img
+                  src={getImageUrl("part4/leftArrow.png")}
+                  alt="Previous"
+                  className={styles.icon}
+                />
+              </button>
+            )}
+
             {screenData.id !== screens.length - 1 && (
               <button
                 className={`${styles.btn} ${styles.rightButton}`}
@@ -112,6 +120,19 @@ export const Part4 = () => {
               </button>
             )}
           </>
+        )}
+
+        {screenData.id === 0 && (
+          <button
+            className={`${styles.btn} ${styles.leftButton}`}
+            onClick={handleLastSection}
+          >
+            <img
+              src={getImageUrl("part4/leftArrow.png")}
+              alt="Last"
+              className={styles.icon}
+            />
+          </button>
         )}
 
         <div className={styles.imgContainer}>

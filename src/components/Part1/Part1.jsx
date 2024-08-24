@@ -36,6 +36,10 @@ export const Part1 = () => {
     window.location.href = "/SFUSD-website/";
   };
 
+  const handleNextSection = () => {
+    window.location.href = "/SFUSD-website/part2";
+  };
+
   return (
     <div>
       <section className={styles.container}>
@@ -49,16 +53,20 @@ export const Part1 = () => {
             className={styles.icon}
           />
         </button>
-        <button
-          className={`${styles.btn} ${styles.leftButton}`}
-          onClick={handlePrevious}
-        >
-          <img
-            src={getImageUrl("part1/leftArrow.png")}
-            alt="Previous"
-            className={styles.icon}
-          />
-        </button>
+
+        {screenData.id != 0 && (
+          <button
+            className={`${styles.btn} ${styles.leftButton}`}
+            onClick={handlePrevious}
+          >
+            <img
+              src={getImageUrl("part1/leftArrow.png")}
+              alt="Previous"
+              className={styles.icon}
+            />
+          </button>
+        )}
+
         <div className={styles.imgContainer}>
           <img
             src={screenData.value}
@@ -76,6 +84,22 @@ export const Part1 = () => {
               alt="Next"
               className={styles.icon}
             />
+          </button>
+        )}
+        {screenData.id === screens.length - 1 && (
+          <button
+            className={`${styles.btn} ${styles.rightButton}`}
+            onClick={handleNextSection}
+          >
+            <img
+              src={getImageUrl("part1/rightArrow.png")}
+              alt="Next"
+              className={styles.icon}
+            />
+            {/* <div className={`${styles.textBtn}`}>
+              Next section on <br />
+              "Currently Policy"
+            </div> */}
           </button>
         )}
       </section>

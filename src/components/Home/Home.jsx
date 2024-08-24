@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { getImageUrl } from "../../utils";
 import styles from "./Home.module.css";
 import { Link } from "react-router-dom";
@@ -86,13 +86,36 @@ export const Home = () => {
 
   return (
     <div className={styles.backgroundImage}>
-      <img
-        src={getBackgroundImage()}
-        className={styles.mainImage}
-        alt={`Homepage Image`}
-      />
+      <div>
+        <img
+          src={getBackgroundImage()}
+          className={`${styles.mainImage}` }
+          alt={`Homepage Image`}
+        />
+      </div>
 
-      <div className={styles.buttonContainer}>
+      <div className={styles.mainBtnContainer}>
+        <button
+          className={styles.mainBtn}
+          onMouseEnter={() => handleMouseEnter("default")}
+          onMouseLeave={handleMouseLeave}
+          style={{
+            backgroundColor: getMainButtonColor(hoveredButton),
+            borderColor: getBorderColor(hoveredButton),
+          }}
+        >
+          <Link to="/part4">
+            <p style={{ color: getBorderColor(hoveredButton) }}>
+              Get Started
+            </p>
+          </Link>
+      </button>
+      </div>
+
+      <div 
+        className={styles.buttonContainer}
+        style={{ backgroundColor: getButtonColor(hoveredButton) }}
+      >
         <button
           className={styles.btn}
           onMouseEnter={() => handleMouseEnter("part1")}
@@ -151,19 +174,6 @@ export const Home = () => {
             <p style={{ color: getTextColor(hoveredButton) }}>
               (2018-Present)
             </p>
-          </Link>
-        </button>
-        <button
-          className={styles.mainBtn}
-          onMouseEnter={() => handleMouseEnter("default")}
-          onMouseLeave={handleMouseLeave}
-          style={{
-            backgroundColor: getMainButtonColor(hoveredButton),
-            borderColor: getBorderColor(hoveredButton),
-          }}
-        >
-          <Link to="/part1">
-            <p style={{ color: getBorderColor(hoveredButton) }}>Get Started</p>
           </Link>
         </button>
       </div>

@@ -31,10 +31,22 @@
 .buttonContainer {
   position: absolute;
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1vw;
+  top: 66%;
+  z-index: 1;
+  width: 100%;
+}
+
+.mainBtnContainer {
+  position: absolute;
+  display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1vw;
-  top: 66%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
@@ -46,11 +58,12 @@
   height: 4.5vw;
   border: transparent;
   font-size: 1.5vw;
+  background-color: transparent;
 }
 
 .mainBtn {
   border-radius: 50vw;
-  width: 20vw;
+  width: 25vw;
   height: 5vw;
   font-size: 1.75vw;
   border-style: solid;
@@ -58,7 +71,7 @@
 }
 
 .btn:hover {
-  transform: scale(1.05);
+  filter: brightness(1.5);
 }
 
 .btn a {

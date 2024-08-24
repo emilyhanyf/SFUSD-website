@@ -2,25 +2,27 @@ import React, { useState } from "react";
 import { getImageUrl } from "../../utils";
 import styles from "./Part3.module.css";
 import Accordion from "./accordion";
+import Accordion2 from './accordion2';
 
 const screens = [
   { id: 0, value: getImageUrl("part3/screen0.png") },
   { id: 1, value: getImageUrl("part3/screen1.png") },
   { id: 2, value: getImageUrl("part3/screen2.png") },
   { id: 3, value: getImageUrl("part3/screen10.png") },
-  { id: 4, value: getImageUrl("part3/screen6.png") },
+  { id: 4, value: getImageUrl("part3/screen11.png") },
+  { id: 5, value: getImageUrl("part3/screen6.png") },
 ];
 
 const goalScreens = [
-  { id: 5, value: getImageUrl("part3/screen3.png") },
-  { id: 6, value: getImageUrl("part3/screen4.png") },
-  { id: 7, value: getImageUrl("part3/screen5.png") },
+  { id: 6, value: getImageUrl("part3/screen3.png") },
+  { id: 7, value: getImageUrl("part3/screen4.png") },
+  { id: 8, value: getImageUrl("part3/screen5.png") },
 ];
 
 const proposalScreens = [
-  { id: 8, value: getImageUrl("part3/screen7.png") },
-  { id: 9, value: getImageUrl("part3/screen8.png") },
-  { id: 10, value: getImageUrl("part3/screen9.png") },
+  { id: 9, value: getImageUrl("part3/screen7.png") },
+  { id: 10, value: getImageUrl("part3/screen8.png") },
+  { id: 11, value: getImageUrl("part3/screen9.png") },
 ];
 
 export const Part3 = () => {
@@ -42,7 +44,7 @@ export const Part3 = () => {
   const handleLearnMoreClick = (index) => {
     if (screenData.id === 2) {
       setScreenData(goalScreens[index]);
-    } else if (screenData.id === 4) {
+    } else if (screenData.id === 5) {
       setScreenData(proposalScreens[index]);
     }
   };
@@ -63,8 +65,16 @@ export const Part3 = () => {
   };
 
   const goBackToProposal = () => {
-    setVal(4);
-    setScreenData(screens[4]);
+    setVal(5);
+    setScreenData(screens[5]);
+  };
+
+  const handleLastSection = () => {
+    window.location.href = "/SFUSD-website/part2";
+  };
+
+  const handleNextSection = () => {
+    window.location.href = "/SFUSD-website/part4";
   };
 
   return (
@@ -72,9 +82,9 @@ export const Part3 = () => {
       <section
         className={styles.backgroundImage}
         onClick={
-          screenData.id > 7
+          screenData.id > 8
             ? goBackToProposal
-            : screenData.id > 4
+            : screenData.id > 5
             ? goBackToGoal
             : null
         }
@@ -85,7 +95,13 @@ export const Part3 = () => {
           </div>
         )}
 
-        {screenData.id < 5 && (
+        {screenData.id === 4 && (
+          <div className={styles.accordionContainer}>
+            <Accordion2 />
+          </div>
+        )}
+
+        {screenData.id < 6 && (
           <>
             <button
               className={`${styles.btn} ${styles.homeButton}`}
@@ -97,7 +113,9 @@ export const Part3 = () => {
                 className={styles.icon}
               />
             </button>
-            <button
+
+            {screenData.id != 0 && (
+              <button
               className={`${styles.btn} ${styles.leftButton}`}
               onClick={handlePrevious}
             >
@@ -107,6 +125,34 @@ export const Part3 = () => {
                 className={styles.icon}
               />
             </button>
+            )}
+            
+            {screenData.id === 0 && (
+          <button
+            className={`${styles.btn} ${styles.leftButton}`}
+            onClick={handleLastSection}
+          >
+            <img
+              src={getImageUrl("part3/leftArrow.png")}
+              alt="Last"
+              className={styles.icon}
+            />
+          </button>
+        )}
+
+        {screenData.id === screens.length - 1 && (
+          <button
+            className={`${styles.btn} ${styles.rightButton}`}
+            onClick={handleNextSection}
+          >
+            <img
+              src={getImageUrl("part3/rightArrow.png")}
+              alt="Next"
+              className={styles.icon}
+            />
+          </button>
+        )}
+        
             {screenData.id != screens.length - 1 && (
               <button
                 className={`${styles.btn} ${styles.rightButton}`}
@@ -153,7 +199,7 @@ export const Part3 = () => {
           </div>
         )}
 
-        {screenData.id === 4 && (
+        {screenData.id === 5 && (
           <div className={styles.btnContainer2}>
             <button
               className={styles.learnMoreBtn}
@@ -179,7 +225,7 @@ export const Part3 = () => {
           </div>
         )}
 
-        {screenData.id > 4 && screenData.id < 8 && (
+        {screenData.id > 5 && screenData.id < 9 && (
           <>
             <button
               className={`${styles.btn} ${styles.homeButton}`}
@@ -194,7 +240,7 @@ export const Part3 = () => {
           </>
         )}
 
-        {screenData.id > 7 && (
+        {screenData.id > 8 && (
           <>
             <button
               className={`${styles.btn} ${styles.homeButton}`}

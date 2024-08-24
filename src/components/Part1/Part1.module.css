@@ -54,6 +54,21 @@
   cursor: pointer;
 }
 
+/* .textBtn {
+  color: #694220; 
+  font-size: 1vw;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  align-items: center;
+  padding-right: 0.5vw;
+  padding-left: 0.5vw;
+}
+
+.textBtn:hover {
+  color: #471803;
+} */
+
 .btn:hover .icon {
   filter: brightness(0.8);
 }
