@@ -119,15 +119,14 @@ export const Part1 = () => {
             className={`${styles.btn} ${styles.rightButton}`}
             onClick={handleNextSection}
           >
-            <img
+            {/* <img
               src={getImageUrl("part1/rightArrow.png")}
               alt="Next"
               className={styles.icon}
-            />
-            {/* <div className={`${styles.textBtn}`}>
-              Next section on <br />
-              "Currently Policy"
-            </div> */}
+            /> */}
+            <div className={`${styles.textBtn}`}>
+              Next Section
+            </div>
           </button>
         )}
       </section>
