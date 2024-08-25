@@ -65,11 +65,12 @@
   padding-left: 0.5vw;
 }
 
-.textBtn:hover {
-  color: #471803;
+.textBtn:hover a {
+  color: #886756;
 }
 
 .textBtn a {
+  color: #694220; 
   text-decoration: none;
 }
 

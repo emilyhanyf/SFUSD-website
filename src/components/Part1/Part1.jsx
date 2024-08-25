@@ -37,9 +37,9 @@ export const Part1 = () => {
     window.location.href = "/SFUSD-website/";
   };
 
-  const handleNextSection = () => {
-    window.location.href = "/SFUSD-website/part2";
-  };
+  // const handleNextSection = () => {
+  //   window.location.href = "/SFUSD-website/part2";
+  // };
 
   return (
     <div>
@@ -118,11 +118,6 @@ export const Part1 = () => {
           <button
             className={`${styles.btn} ${styles.rightButton}`}
           >
-            {/* <img
-              src={getImageUrl("part1/rightArrow.png")}
-              alt="Next"
-              className={styles.icon}
-            /> */}
             <div className={`${styles.textBtn}`}>
              <Link to="/part2">
               Next Section

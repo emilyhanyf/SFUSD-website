@@ -136,3 +136,23 @@
 .topBtn a {
   text-decoration: none;
 }
+
+.textBtn {
+  color: #3d3d3d; 
+  font-size: 1vw;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  align-items: center;
+  padding-right: 0.5vw;
+  padding-left: 0.5vw;
+}
+
+.textBtn:hover a {
+  color: #767676;
+}
+
+.textBtn a {
+  color: #3d3d3d; 
+  text-decoration: none;
+}

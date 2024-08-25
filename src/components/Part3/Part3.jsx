@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { getImageUrl } from "../../utils";
 import styles from "./Part3.module.css";
 import Accordion from "./accordion";
-import Accordion2 from './accordion2';
+import Accordion2 from "./accordion2";
 import { Link } from "react-router-dom";
 
 const screens = [
@@ -70,13 +70,13 @@ export const Part3 = () => {
     setScreenData(screens[5]);
   };
 
-  const handleLastSection = () => {
-    window.location.href = "/SFUSD-website/part2";
-  };
+  // const handleLastSection = () => {
+  //   window.location.href = "/SFUSD-website/part2";
+  // };
 
-  const handleNextSection = () => {
-    window.location.href = "/SFUSD-website/part4";
-  };
+  // const handleNextSection = () => {
+  //   window.location.href = "/SFUSD-website/part4";
+  // };
 
   return (
     <div>
@@ -144,43 +144,33 @@ export const Part3 = () => {
 
             {screenData.id != 0 && (
               <button
-              className={`${styles.btn} ${styles.leftButton}`}
-              onClick={handlePrevious}
-            >
-              <img
-                src={getImageUrl("part3/leftArrow.png")}
-                alt="Previous"
-                className={styles.icon}
-              />
-            </button>
+                className={`${styles.btn} ${styles.leftButton}`}
+                onClick={handlePrevious}
+              >
+                <img
+                  src={getImageUrl("part3/leftArrow.png")}
+                  alt="Previous"
+                  className={styles.icon}
+                />
+              </button>
             )}
-            
-            {screenData.id === 0 && (
-          <button
-            className={`${styles.btn} ${styles.leftButton}`}
-            onClick={handleLastSection}
-          >
-            <img
-              src={getImageUrl("part3/leftArrow.png")}
-              alt="Last"
-              className={styles.icon}
-            />
-          </button>
-        )}
 
-        {screenData.id === screens.length - 1 && (
-          <button
-            className={`${styles.btn} ${styles.rightButton}`}
-            onClick={handleNextSection}
-          >
-            <img
-              src={getImageUrl("part3/rightArrow.png")}
-              alt="Next"
-              className={styles.icon}
-            />
-          </button>
-        )}
-        
+            {screenData.id === 0 && (
+              <button className={`${styles.btn} ${styles.leftButton}`}>
+                <div className={`${styles.textBtn}`}>
+                  <Link to="/part2">Last Section</Link>
+                </div>
+              </button>
+            )}
+
+            {screenData.id === screens.length - 1 && (
+              <button className={`${styles.btn} ${styles.rightButton}`}>
+                <div className={`${styles.textBtn}`}>
+                  <Link to="/part4">Next Section</Link>
+                </div>
+              </button>
+            )}
+
             {screenData.id != screens.length - 1 && (
               <button
                 className={`${styles.btn} ${styles.rightButton}`}

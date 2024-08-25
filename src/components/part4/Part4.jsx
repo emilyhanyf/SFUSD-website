@@ -72,13 +72,13 @@ export const Part4 = () => {
     setScreenData(screens[1]);
   };
 
-  const handleLastSection = () => {
-    window.location.href = "/SFUSD-website/part3";
-  };
+  // const handleLastSection = () => {
+  //   window.location.href = "/SFUSD-website/part3";
+  // };
 
   return (
     <div>
-            <div className={styles.buttonContainer}>
+      <div className={styles.buttonContainer}>
         <button className={styles.topBtn}>
           <Link to="/part1">
             <p>Resegregation</p>
@@ -151,15 +151,10 @@ export const Part4 = () => {
         )}
 
         {screenData.id === 0 && (
-          <button
-            className={`${styles.btn} ${styles.leftButton}`}
-            onClick={handleLastSection}
-          >
-            <img
-              src={getImageUrl("part4/leftArrow.png")}
-              alt="Last"
-              className={styles.icon}
-            />
+          <button className={`${styles.btn} ${styles.leftButton}`}>
+            <div className={`${styles.textBtn}`}>
+              <Link to="/part3">Last Section</Link>
+            </div>
           </button>
         )}
 

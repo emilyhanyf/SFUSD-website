@@ -196,3 +196,23 @@
 .topBtn a {
   text-decoration: none;
 }
+
+.textBtn {
+  color: white; 
+  font-size: 1vw;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  align-items: center;
+  padding-right: 0.5vw;
+  padding-left: 0.5vw;
+}
+
+.textBtn:hover a {
+  color: rgb(191, 229, 255);
+}
+
+.textBtn a {
+  color: white; 
+  text-decoration: none;
+}
