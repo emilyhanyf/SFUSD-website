@@ -117,7 +117,6 @@ export const Part1 = () => {
         {screenData.id === screens.length - 1 && (
           <button
             className={`${styles.btn} ${styles.rightButton}`}
-            onClick={handleNextSection}
           >
             {/* <img
               src={getImageUrl("part1/rightArrow.png")}
@@ -125,7 +124,9 @@ export const Part1 = () => {
               className={styles.icon}
             /> */}
             <div className={`${styles.textBtn}`}>
+             <Link to="/part2">
               Next Section
+            </Link>
             </div>
           </button>
         )}

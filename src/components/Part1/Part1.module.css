@@ -69,6 +69,10 @@
   color: #471803;
 }
 
+.textBtn a {
+  text-decoration: none;
+}
+
 .btn:hover .icon {
   filter: brightness(0.8);
 }
